@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="scripts/lib/jquery.fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <title>A Standard Roundabout</title>
+    <style>
+      ul {
+        margin: 50px auto;
+        width: 800px;
+        height: 370px;
+      }
+      li {
+        display: block;
+        width: 300px;
+        height: 200px;
+      }
+      li img {
+        width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a class="fancy" href="#inline"><img src="img/dummy1.png" /></a></li>
+      <li><a class="fancy" href="#inline"><img src="img/dummy2.png" /></a></li>
+      <li><a class="fancy" href="#inline"><img src="img/dummy3.png" /></a></li>
+      <li><a class="fancy" href="#inline"><img src="img/dummy4.png" /></a></li>
+      <li><a class="fancy" href="#inline"><img src="img/dummy5.png" /></a></li>
+    </ul>
+    
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.roundabout.js"></script>
+    <script src="js/jquery.fancybox/jquery.fancybox.pack.js"></script>
+    <script src="js/reflection.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('img').reflect();
+        $('ul').roundabout();
+        $(".fancy").fancybox({
+          maxWidth    : 800,
+          maxHeight   : 600,
+          fitToView   : false,
+          width       : '70%',
+          height      : '70%',
+          autoSize    : false,
+          closeClick  : false,
+          openEffect  : 'none',
+          closeEffect : 'none'
+        });
+      });
+    </script>
+  </body>
+</html>
